@@ -8,4 +8,5 @@ clean:
 	@rm -fr $(TGT)
 
 docs/%.md : src/%.md
+	@mkdir -p $(dir $@)
 	@cp -f $< $@
