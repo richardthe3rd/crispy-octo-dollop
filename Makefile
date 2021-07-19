@@ -1,6 +1,6 @@
 all:  build-artifacts build-docs
 
-clean: clean-docs
+clean: clean-docs clean-artifacts
 
 build-artifacts:
 	$(MAKE) -C artifact-src build
