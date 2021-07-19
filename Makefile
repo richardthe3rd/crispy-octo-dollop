@@ -1,11 +1,11 @@
 
 SRC := $(wildcard src/*.md)
-TGT := $(addprefix pages/,$(notdir $(SRC)))
+TGT := $(addprefix docs/,$(notdir $(SRC)))
 
 build: $(TGT)
 
 clean:
 	@rm -fr $(TGT)
 
-pages/%.md : src/%.md
+docs/%.md : src/%.md
 	@cp -f $< $@
