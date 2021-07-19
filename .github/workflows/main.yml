@@ -9,8 +9,14 @@ jobs:
 
       - name: Install and Build 🔧 
         run: make
-
-      - name: Deploy 🚀
+        
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: artifacts/*.bin
+            
+      - name: Deploy Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages # The branch the action should deploy to.
